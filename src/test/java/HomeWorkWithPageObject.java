@@ -10,7 +10,6 @@ public class HomeWorkWithPageObject {
     @BeforeMethod
     public void before() {
         Configuration.startMaximized = true;
-        Configuration.holdBrowserOpen = true;
         Configuration.timeout = 5000;
         open("https://www.rozetka.com.ua");
 
