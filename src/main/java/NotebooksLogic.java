@@ -25,7 +25,7 @@ public class NotebooksLogic extends NotebooksLogicElements {
     }
 
     public NotebooksLogic assertCountInBasketLogic() {
-        Assert.assertEquals(productInBasketText(), firstProductInCatalogText(), "В корзине разные товары");
+        Assert.assertEquals(productInBasketText(), firstProductInCatalogText(), "Товар в корзине не такой как в каталоге");
         return this;
     }
 }
