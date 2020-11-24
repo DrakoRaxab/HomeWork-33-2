@@ -43,13 +43,8 @@ public class NotebooksLogic extends NotebooksLogicElements {
         return this;
     }
 
-    //    public NotebooksLogic assertTestInNotebooksLogic() {
-//        Assert.assertEquals(basketCounterText(), "1", "В корзине больше одного товара");
-//        return this;
-//    }
-//
     public NotebooksLogic assertCountInBasketLogic() {
-        Assert.assertEquals(productInBasketText(), firstProductInCatalogText(), "В корзине больше одного товара");
+        Assert.assertEquals(productInBasketText(), firstProductInCatalogText(), "В корзине разные товары");
         return this;
     }
 }
