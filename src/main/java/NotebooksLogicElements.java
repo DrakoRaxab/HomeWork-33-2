@@ -8,7 +8,6 @@ public class NotebooksLogicElements {
     SelenideElement firstProductInCatalog = $(By.xpath("//a[@class='goods-tile__heading']"));
     SelenideElement buyButton = $(By.xpath("//button[@class='buy-button goods-tile__buy-button']"));
     SelenideElement basketCounter = $(By.xpath("//span[@class='header-actions__button-counter']"));
-    SelenideElement basket = $(By.xpath("//a[@class='header-actions__button header-actions__button_type_basket header-actions__button_state_active']"));
     SelenideElement productInBasket = $(By.xpath("//a[@class='cart-product__title']"));
 
 }

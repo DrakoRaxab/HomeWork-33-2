@@ -3,7 +3,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomeWorkWithPageObject {
@@ -21,8 +20,7 @@ public class HomeWorkWithPageObject {
 
     public void pageObject() {
         new MainPageLogic().computersAndNotebookMenuClick();
-        new MainPageLogic().computersAndNotebookMenuClick();
-        new ComputersAndNotebooksLogic().notebookImgClick();
+        new ComputersAndNotebooksLogic().notebookImgClickJS();
         new NotebooksLogic().buyButtonClick().basketCounterText()
                 .assertCountInBasketLogic();
     }
