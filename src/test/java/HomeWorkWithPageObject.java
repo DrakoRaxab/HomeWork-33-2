@@ -22,7 +22,7 @@ public class HomeWorkWithPageObject {
     public void pageObject() {
         new MainPageLogic().computersAndNotebookMenuClick();
         new MainPageLogic().computersAndNotebookMenuClick();
-        new ComputersAndNotebooksLogic().notebookImgClickJS();
+        new ComputersAndNotebooksLogic().notebookImgClick();
         new NotebooksLogic().buyButtonClick().basketCounterText()
                 .assertCountInBasketLogic();
     }
