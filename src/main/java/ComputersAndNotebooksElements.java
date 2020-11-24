@@ -6,5 +6,5 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ComputersAndNotebooksElements {
 
-    SelenideElement notebookImg = $(By.xpath("//a[@class='tile-cats__heading tile-cats__heading_type_center']"));
+    SelenideElement notebookImg = $(By.xpath("//img[@alt='Ноутбуки']"));
 }

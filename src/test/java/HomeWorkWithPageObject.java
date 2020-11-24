@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,8 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
 
 public class HomeWorkWithPageObject {
     WebDriver driver;
@@ -24,12 +24,14 @@ public class HomeWorkWithPageObject {
     @BeforeMethod
     public void before() {
         Configuration.startMaximized = true;
+        Configuration.holdBrowserOpen = true;
         Configuration.timeout = 5000;
         open("https://www.rozetka.com.ua");
 
     }
 
     @Test
+
     public void pageObject() {
         new MainPageLogic().computersAndNotebookMenuClick();
 
