@@ -4,12 +4,15 @@ import static com.codeborne.selenide.Condition.visible;
 
 public class BasketLogic extends BasketElements {
 
+    String titleOfFirstProductInCatalog = new NotebooksLogic().getTitleOfFirstProductInCatalog();
+
     public String productInBasketText() {
         return productInBasket.shouldBe(visible).getText();
     }
 
-    public BasketLogic assertCountInBasketLogic(String firstProductInCatalogText) {
-        Assert.assertEquals(productInBasketText(), firstProductInCatalogText, "Товар в корзине не такой как в каталоге");
+    public BasketLogic assertCountInBasketLogic() {
+        Assert.assertEquals(productInBasketText(), titleOfFirstProductInCatalog, "Товар в корзине не такой как в каталоге");
+        System.out.println(productInBasketText() + " - " + titleOfFirstProductInCatalog);
         return this;
     }
 }

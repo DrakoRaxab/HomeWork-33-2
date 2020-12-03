@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class NotebooksLogic extends NotebooksElements {
 
+
     public String getTitleOfFirstProductInCatalog() {
         return firstProductInCatalog.shouldBe(visible).getText();
     }

@@ -19,10 +19,10 @@ public class HomeWorkWithPageObject {
 
     public void pageObject() {
 
-        String titleOfFirstProductInCatalog = new MainPageLogic().computersAndNotebookMenuClick()
-                .notebookImgClickJS().getTitleOfFirstProductInCatalog();
-        new NotebooksLogic().buyButtonClick().basketCounterText()
-                .assertCountInBasketLogic(titleOfFirstProductInCatalog);
+        new MainPageLogic().computersAndNotebookMenuClick()
+                .notebookImgClickJS()
+                .buyButtonClick().basketCounterText()
+                .assertCountInBasketLogic();
 
     }
 }
