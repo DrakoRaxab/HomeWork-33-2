@@ -18,12 +18,11 @@ public class HomeWorkWithPageObject {
     @Test
 
     public void pageObject() {
-        new MainPageLogic().computersAndNotebookMenuClick()
-                .notebookImgClickJS()
-                .buyButtonClick().basketCounterText()
-                .assertCountInBasketLogic();
-//        new ComputersAndNotebooksLogic().notebookImgClickJS();
-//        new NotebooksLogic().buyButtonClick().basketCounterText()
-//                .assertCountInBasketLogic();
+
+        String titleOfFirstProductInCatalog = new MainPageLogic().computersAndNotebookMenuClick()
+                .notebookImgClickJS().getTitleOfFirstProductInCatalog();
+        new NotebooksLogic().buyButtonClick().basketCounterText()
+                .assertCountInBasketLogic(titleOfFirstProductInCatalog);
+
     }
 }

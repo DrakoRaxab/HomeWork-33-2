@@ -1,20 +1,15 @@
 import org.testng.Assert;
 
-public class BasketLogic extends BasketElements{
+import static com.codeborne.selenide.Condition.visible;
 
-    public BasketLogic firstProductInCatalogText() {
-        firstProductInCatalog.getText();
-        return this;
+public class BasketLogic extends BasketElements {
+
+    public String productInBasketText() {
+        return productInBasket.shouldBe(visible).getText();
     }
 
-    public BasketLogic productInBasketText() {
-        productInBasket.getText();
+    public BasketLogic assertCountInBasketLogic(String firstProductInCatalogText) {
+        Assert.assertEquals(productInBasketText(), firstProductInCatalogText, "Товар в корзине не такой как в каталоге");
         return this;
     }
-
-    public BasketLogic assertCountInBasketLogic() {
-        Assert.assertEquals(productInBasketText(), firstProductInCatalogText(), "Товар в корзине не такой как в каталоге");
-        return this;
-    }
-
 }
