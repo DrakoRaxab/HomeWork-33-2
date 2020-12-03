@@ -12,7 +12,6 @@ public class BasketLogic extends BasketElements {
 
     public BasketLogic assertCountInBasketLogic() {
         Assert.assertEquals(productInBasketText(), titleOfFirstProductInCatalog, "Товар в корзине не такой как в каталоге");
-        System.out.println(productInBasketText() + " - " + titleOfFirstProductInCatalog);
         return this;
     }
 }
