@@ -19,7 +19,8 @@ public class HomeWorkWithPageObject {
 
     public void pageObject() {
         new MainPageLogic().computersAndNotebookMenuClick()
-                .notebookImgClickJS().buyButtonClick().basketCounterText()
+                .notebookImgClickJS()
+                .buyButtonClick().basketCounterText()
                 .assertCountInBasketLogic();
 //        new ComputersAndNotebooksLogic().notebookImgClickJS();
 //        new NotebooksLogic().buyButtonClick().basketCounterText()
